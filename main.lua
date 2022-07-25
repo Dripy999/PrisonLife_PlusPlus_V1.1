@@ -78,7 +78,7 @@ if game.PlaceId == 155615604 then
         local player = game.Players.LocalPlayer
         local character = player.Character or player.CharacterAdded:Wait()
 
-        if enabled then
+        while enabled do
             player = game.Players.LocalPlayer
             character = player.Character
                 for _, v in pairs(character:GetDescendants()) do
@@ -92,7 +92,7 @@ if game.PlaceId == 155615604 then
             end
             game:GetService("RunService").Stepped:wait()
 
-        if not enabled then
+        while not enabled do
             for _, v in pairs(character:GetDescendants()) do
                 pcall(function()
                     if v:IsA("BasePart") then
