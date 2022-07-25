@@ -91,18 +91,7 @@ if game.PlaceId == 155615604 then
                 end
             end
             game:GetService("RunService").Stepped:wait()
-
-        while not enabled do
-            for _, v in pairs(character:GetDescendants()) do
-                pcall(function()
-                    if v:IsA("BasePart") then
-                        v.CanCollide = true
-                    end
-                end)
-            end
-        game:GetService("RunService").Stepped:wait()
-        end
-
+			
     end)
 
     Section3:NewLabel("Teams")
